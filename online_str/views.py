@@ -12,12 +12,12 @@ from django.utils.encoding import force_bytes, force_text
 from django.contrib.auth.forms import UserCreationForm
 
 
-
 # Create your views here.
 def index(request):
     products = Product.objects.all()
     return render(request, 'index.html',
                   {'products': products})
+
 
 def register(request):
     form = UserCreationForm()
